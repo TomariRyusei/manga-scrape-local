@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "node --env-file=.env ./dist/index.js",
+    "dev:ts-node": "ts-node src/index.ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "plist": "code ~/Library/LaunchAgents/manga-scrape.plist",
     "test": "jest"
   },
   "keywords": [],
@@ -24,7 +26,6 @@
   "dependencies": {
     "axios": "^1.12.2",
     "cheerio": "^1.1.2",
-    "dotenv": "^17.2.2",
     "nodemailer": "^7.0.6"
   }
 }
