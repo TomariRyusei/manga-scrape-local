@@ -3,20 +3,23 @@ import nodemailer from "nodemailer";
 import { INotification } from "./INotification";
 
 export class EmailNotifier implements INotification {
-  constructor(
-    private emailConfig: {
-      host: string;
-      auth: {
-        user: string | undefined;
-        pass: string | undefined;
-      };
+  private emailConfig: {
+    host: string;
+    auth: {
+      user: string | undefined;
+      pass: string | undefined;
+    };
+  } = {
+    host: "smtp.gmail.com",
+    auth: {
+      user: process.env.MAIL_ADDRESS,
+      pass: process.env.MAIL_SERVICE_PASSWORD,
     },
-    private recipientEmail: string | undefined
-  ) {
-    if (!emailConfig.auth.user || !emailConfig.auth.pass || !recipientEmail) {
-      throw new Error("Email configuration is not set");
-    }
-  }
+  };
+
+  private recipientEmail: string = process.env.MAIL_ADDRESS || "";
+
+  constructor() {}
 
   async send(message: string): Promise<void> {
     try {
