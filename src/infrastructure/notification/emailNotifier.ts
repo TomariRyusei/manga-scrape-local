@@ -1,8 +1,9 @@
 import nodemailer from "nodemailer";
+import "dotenv/config";
 
-import { INotification } from "./INotification";
+import { INotifier } from "./INotification";
 
-export class EmailNotifier implements INotification {
+export class EmailNotifier implements INotifier {
   private emailConfig: {
     host: string;
     auth: {

@@ -1,8 +1,9 @@
 import axios from "axios";
+import "dotenv/config";
 
-import { INotification } from "./INotification";
+import { INotifier } from "./INotification";
 
-export class LineNotifier implements INotification {
+export class LineNotifier implements INotifier {
   constructor() {}
 
   async send(message: string): Promise<void> {
