@@ -9,6 +9,8 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "plist": "code ~/Library/LaunchAgents/manga-scrape.plist",
+    "load-task": "launchctl load -w ~/Library/LaunchAgents/manga-scrape.plist",
+    "unload-task": "launchctl unload -w ~/Library/LaunchAgents/manga-scrape.plist",
     "test": "jest"
   },
   "keywords": [],
