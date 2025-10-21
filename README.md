@@ -65,6 +65,26 @@
 
    [`src/myMangaList.ts`](src/myMangaList.ts) の [`myMangaList`](src/myMangaList.ts) 配列を編集してください。
 
+5. **自動実行スクリプトのパス確認**
+
+   `start-app.sh` にある作業ディレクトリ指定（`cd /Users/ryusei/dev/manga-scrape-local`）は、このリポジトリを置いた場所によって変わります。macOS の LaunchAgent や手動でスクリプトを実行する前に、必ず自分の環境に合わせてパスを更新してください。
+
+   例: リポジトリを `~/projects/manga-scrape-local` に置いた場合は、`start-app.sh` を以下のように編集します:
+
+   ```sh
+   #!/bin/bash
+   set -e
+
+   echo "=== $(date '+%Y-%m-%d %H:%M:%S') - Starting Node App ==="
+
+   cd /Users/your-username/projects/manga-scrape-local || exit 1
+   node --env-file=.env ./dist/index.js
+
+   echo "=== $(date '+%Y-%m-%d %H:%M:%S') - Completed Successfully ==="
+   ```
+
+   注意: `your-username` はご自身の macOS ユーザー名（`echo $USER` で確認可能）に置き換えてください。`zsh` を使っている場合も同様です。
+
 ## 実行方法
 
 - **手動実行**
