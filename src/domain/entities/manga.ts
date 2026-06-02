@@ -4,7 +4,10 @@ export interface Manga {
 }
 
 export class MangaEntity implements Manga {
-  constructor(public title: string, public releaseDate: string) {
+  constructor(
+    public title: string,
+    public releaseDate: string,
+  ) {
     if (!title) {
       throw new Error("タイトルは必須です");
     }

@@ -8,7 +8,7 @@ export class ScrapeMangaUseCase {
     private scraper: IScraper,
     private notifier: INotifier,
     private myMangaList: string[],
-    private scrapingUrl: string
+    private scrapingUrl: string,
   ) {}
 
   async execute(): Promise<void> {

@@ -10,7 +10,7 @@ export class MangaService implements IMangaService {
 
   filterMyManga(allManga: Manga[], myMangaList: string[]): Manga[] {
     return allManga.filter((manga) =>
-      myMangaList.some((myManga) => manga.title.toLowerCase().includes(myManga.toLowerCase()))
+      myMangaList.some((myManga) => manga.title.toLowerCase().includes(myManga.toLowerCase())),
     );
   }
 

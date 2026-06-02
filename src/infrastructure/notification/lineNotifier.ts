@@ -16,7 +16,7 @@ export class LineNotifier implements INotifier {
             "Content-Type": "application/json",
             Authorization: `Bearer ${process.env.LINE_CHANNEL_ACCSESS_TOKEN}`,
           },
-        }
+        },
       );
     } catch (error) {
       console.error("Error in LineNotifier:", error);
