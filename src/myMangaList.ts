@@ -10,4 +10,5 @@ export const myMangaList = [
   "少年院ウシジマくん",
   "路傍のフジイ",
   "アンダーニンジャ",
+  "MAD",
 ];
