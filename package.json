@@ -5,24 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "node ./dist/index.js",
-    "dev:ts-node": "ts-node src/index.ts",
+    "dev:tsx": "tsx src/index.ts",
+    "dev:watch": "tsx watch src/index.ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
     "plist": "code ~/Library/LaunchAgents/manga-scrape.plist",
     "load-task": "launchctl load -w ~/Library/LaunchAgents/manga-scrape.plist",
-    "unload-task": "launchctl unload -w ~/Library/LaunchAgents/manga-scrape.plist",
-    "test": "jest"
+    "unload-task": "launchctl unload -w ~/Library/LaunchAgents/manga-scrape.plist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.5.2",
-    "jest": "^30.1.3",
-    "ts-jest": "^29.4.4",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.23.11",
     "typescript": "^5.9.2"
   },
   "dependencies": {
